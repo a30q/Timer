@@ -1,0 +1,9 @@
+#reset {
+    padding: 12px 25px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none; 
+    transition: none;
+}

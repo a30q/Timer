@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>just wake up</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            direction: rtl;
+            background-color: black;
+            color: white;
+        }
+        #timer {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="timer">0:00</div>
+    <link href="https://fonts.cdnfonts.com/css/determination-mono" rel="stylesheet">
+
+<style>
+    #reset {
+        padding: 12px 25px;
+        font-size: 22px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border: none;
+        transition: none;
+        font-family: 'Determination Mono', monospace;
+    }
+
+    #reset:hover {
+        color: #00ff00;
+    }
+</style>
+
+<button id="reset" onclick="resetTimer()">reset</button>
+
+    <script>
+        let seconds = 0;
+        let interval = setInterval(updateTimer, 1000);
+
+        function updateTimer() {
+            seconds++;
+            let mins = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            document.getElementById("timer").textContent =
+                mins + ":" + (secs < 10 ? "0" + secs : secs);
+        }
+
+        function resetTimer() {
+            seconds = 0;
+        }
+    </script>
+
+</body>
+</html>
